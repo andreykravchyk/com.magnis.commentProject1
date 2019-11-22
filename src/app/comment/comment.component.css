@@ -1,0 +1,58 @@
+.comment{
+  border-bottom: 1px solid #999999;
+  padding: 15px;
+  margin-right: 20px;
+}
+
+.addMainCommentBlock {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.subCommentContainer{
+  margin-left: 20px;
+}
+
+.inpt{
+  padding: 5px 7px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+}
+
+.btn {
+  padding: 7px 15px;
+  text-transform: uppercase;
+  background: #e99930;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete {
+  cursor: pointer;
+  color:#3c67dd;
+}
+
+.delete:hover {
+  text-decoration-line: underline;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: rgba(255, 227, 101, 0.376);
+}
+
+.addMainCommentBlock{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.mainInput{
+  padding: 10px 17px;
+  width: 60%;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="addMainCommentBlock">
+        <input type="text" class='inpt mainInput' data-type="mainComment" placeholder="input new comment . . ." #Inputelement>
+        <button  class ="btn" (click) = "addComment(Inputelement)" > submit </button>
+    </div>
+  <div class="commentList">
+    <div class="comment" *ngFor="let comment of commentListArray">
+      {{comment.content}}
+      <span class="delete" data-type="mainComment" [attr.data-id]= "comment.id" (click)="deleteComment(Element)" #Element >remove</span>
+      <div *ngIf="comment.subComments.length" class="subCommentContainer">
+        <div class="subComment" *ngFor="let subComment of comment.subComments">
+          <p>{{subComment.content}}  <span class="delete" data-type="subComment" [attr.data-id]= "comment.id" [attr.data-subId]= "subComment.id" (click)="deleteComment(Element)" #Element>remove</span> </p>
+          
+        </div>
+      </div>
+      <div>
+          <input type="text" class="inpt subInput" data-type="subComment" [attr.data-id]= "comment.id"  placeholder="add sub comment" #subInputElement>
+          <button class="btn" (click) = "addComment(subInputElement)" > submit </button>
+      </div>
+    </div>
+  </div>
+</div>
